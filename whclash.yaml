@@ -1,0 +1,77 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+tun:
+  enable: true
+  stack: system
+  auto-route: true
+  auto-detect-interface: true
+  dns-hijack:
+    - any:53
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver:
+    - 8.8.8.8
+    - 1.1.1.1
+  nameserver:
+    - https://doh.pub/dns-query
+    - https://1.0.0.1/dns-query
+  fallback:
+    - tcp://9.9.9.9:53
+  fake-ip-filter:
+    - "*.lan"
+    - localhost
+    - "*.local"
+rules:
+  - GEOIP,Private,DIRECT
+  - MATCH,Proxy
+
+proxies:
+    - alterId: 0
+      cipher: auto
+      name: 武汉ws
+      network: ws
+      port: 16983
+      server: dns.yiandrive.com
+      type: vmess
+      uuid: e72097c7-b49a-42eb-b867-2245e57ed7a0
+      ws-opts:
+        early-data-header-name: Sec-WebSocket-Protocol
+        path: /
+        headers:
+         Host: api.mobile.youku.com
+      ws-path: /
+      ws-headers:
+       Host: api.mobile.youku.com
+    - alterId: 0
+      cipher: auto
+      http-opts:
+        host: api.mobile.youku.com
+        path:
+            - /
+      name: 武汉tcp
+      network: http
+      port: 17491
+      server: dns.yiandrive.com
+      type: vmess
+      uuid: e72097c7-b49a-42eb-b867-2245e57ed7a0
+proxy-groups:
+    - name: Proxy
+      proxies:
+        - Auto
+        - vmess-666
+        - vmess-888
+      type: select
+    - interval: 300
+      name: Auto
+      proxies:
+        - vmess-666
+        - vmess-888
+      tolerance: 50
+      type: url-test
+      url: http://www.gstatic.com/generate_204
