@@ -45,9 +45,6 @@ proxies:
         path: /
         headers:
          Host: push.m.youku.com
-      ws-path: /
-      ws-headers:
-       Host: push.m.youku.com
     - alterId: 0
       cipher: auto
       http-opts:
