@@ -44,14 +44,14 @@ proxies:
         early-data-header-name: Sec-WebSocket-Protocol
         path: /
         headers:
-         Host: api.mobile.youku.com
+         Host: push.m.youku.com
       ws-path: /
       ws-headers:
-       Host: api.mobile.youku.com
+       Host: push.m.youku.com
     - alterId: 0
       cipher: auto
       http-opts:
-        host: api.mobile.youku.com
+        host: push.m.youku.com
         path:
             - /
       name: 武汉tcp
