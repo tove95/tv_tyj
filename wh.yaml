@@ -58,10 +58,10 @@ global-client-fingerprint: random
 sniffer:
   enable: false
 proxies:
-  - {name: 武汉ws, server: dns.yiandrive.com, port: 16983, type: vmess, uuid: e72097c7-b49a-42eb-b867-2245e57ed7a0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: push.m.youku.com}}, udp: true}
-  - {name: 武汉tcp, server: dns.yiandrive.com, port: 17491, type: vmess, uuid: e72097c7-b49a-42eb-b867-2245e57ed7a0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: http, http-opts: {method: GET, path: [/], headers: {Host: [push.m.youku.com]}}, udp: true}
-  - {name: 成都ws, server: nat.520951.xyz, port: 802, type: vmess, uuid: e72097c7-b49a-42eb-b867-2245e57ed7a0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ws666, headers: {Host: push.m.youku.com}}, udp: true}
-  - {name: 成都tcp, server: nat.520951.xyz, port: 801, type: vmess, uuid: e72097c7-b49a-42eb-b867-2245e57ed7a0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: http, http-opts: {method: GET, path: [/tcp801], headers: {Host: [push.m.youku.com]}}, udp: true}
+  - {name: 武汉ws, server: dns.yiandrive.com, port: 16983, type: vmess, uuid: e72097c7-b49a-42eb-b867-2245e57ed7a0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: push.m.youku.com}}, udp: false}
+  - {name: 武汉tcp, server: dns.yiandrive.com, port: 17491, type: vmess, uuid: e72097c7-b49a-42eb-b867-2245e57ed7a0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: http, http-opts: {method: GET, path: [/], headers: {Host: [push.m.youku.com]}}, udp: false}
+  - {name: 成都ws, server: nat.520951.xyz, port: 802, type: vmess, uuid: e72097c7-b49a-42eb-b867-2245e57ed7a0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ws666, headers: {Host: push.m.youku.com}}, udp: false}
+  - {name: 成都tcp, server: nat.520951.xyz, port: 801, type: vmess, uuid: e72097c7-b49a-42eb-b867-2245e57ed7a0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: http, http-opts: {method: GET, path: [/tcp801], headers: {Host: [push.m.youku.com]}}, udp: false}
 proxy-groups:
   - name: 非中国大陆
     type: select
