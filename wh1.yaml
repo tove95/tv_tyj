@@ -58,13 +58,15 @@ global-client-fingerprint: random
 sniffer:
   enable: false
 proxies:
-  - {name: 武汉ws, server: dns.yiandrive.com, port: 16983, type: vmess, uuid: e72097c7-b49a-42eb-b867-2245e57ed7a0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: api.mobile.youku.com}}, udp: false}
-  - {name: 武汉tcp, server: dns.yiandrive.com, port: 17491, type: vmess, uuid: e72097c7-b49a-42eb-b867-2245e57ed7a0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: http, http-opts: {method: GET, path: [/], headers: {Host: [api.mobile.youku.com]}}, udp: false}
   - {name: 成都ws, server: nat.520951.xyz, port: 802, type: vmess, uuid: e72097c7-b49a-42eb-b867-2245e57ed7a0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ws666, headers: {Host: m-vali.cp31.ott.cibntv.net}}, udp: false}
   - {name: 成都tcp, server: nat.520951.xyz, port: 801, type: vmess, uuid: e72097c7-b49a-42eb-b867-2245e57ed7a0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: http, http-opts: {method: GET, path: [/tcp801], headers: {Host: [m-vali.cp31.ott.cibntv.net]}}, udp: false}
-  - {name: 西藏ws, server: xz.520951.xyz, port: 666, type: vmess, uuid: e72097c7-b49a-42eb-b867-2245e57ed7a0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: m-vali.cp31.ott.cibntv.net}}, udp: false}
-  - {name: 西藏tcp, server: xz.520951.xyz, port: 888, type: vmess, uuid: e72097c7-b49a-42eb-b867-2245e57ed7a0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: http, http-opts: {method: GET, path: [/], headers: {Host: [m-vali.cp31.ott.cibntv.net]}}, udp: false}
-
+  - {name: 西藏ws｜ipv6, server: xz.520951.xyz, port: 666, type: vmess, uuid: e72097c7-b49a-42eb-b867-2245e57ed7a0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: m-vali.cp31.ott.cibntv.net}}, udp: false}
+  - {name: 西藏tcp｜ipv6, server: xz.520951.xyz, port: 888, type: vmess, uuid: e72097c7-b49a-42eb-b867-2245e57ed7a0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: http, http-opts: {method: GET, path: [/], headers: {Host: [m-vali.cp31.ott.cibntv.net]}}, udp: false}
+  - {name: 深圳ws, server: dsz.yiandrive.com, port: 36802, type: vmess, uuid: e72097c7-b49a-42eb-b867-2245e57ed7a0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: m-vali.cp31.ott.cibntv.net}}, udp: false}
+  - {name: 深圳tcp, server: dsz.yiandrive.com, port: 54935, type: vmess, uuid: e72097c7-b49a-42eb-b867-2245e57ed7a0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: http, http-opts: {method: GET, path: [/], headers: {Host: [m-vali.cp31.ott.cibntv.net]}}, udp: false}
+  - {name: 深圳ws｜ipv6, server: sz.520951.xyz, port: 666, type: vmess, uuid: e72097c7-b49a-42eb-b867-2245e57ed7a0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: m-vali.cp31.ott.cibntv.net}}, udp: false}
+  - {name: 深圳tcp｜ipv6, server: sz.520951.xyz, port: 888, type: vmess, uuid: e72097c7-b49a-42eb-b867-2245e57ed7a0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: http, http-opts: {method: GET, path: [/], headers: {Host: [m-vali.cp31.ott.cibntv.net]}}, udp: false}
+ 
 proxy-groups:
   - name: 非中国大陆
     type: select
